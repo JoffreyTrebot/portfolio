@@ -2,37 +2,23 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import Head from "next/head";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AiFillGithub, AiFillLinkedin, AiOutlineDown } from "react-icons/ai";
 
 export default function Home() {
-  const [visible, setVisible] = useState(false)
-  
-  const toggleVisible = () => {
-    const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 300){
-      setVisible(true)
-    } 
-    else if (scrolled <= 300){
-      setVisible(false)
-    }
-  };
-  
-  const scrollToTop = () =>{
+  const clientsSectionRef = useRef<HTMLDivElement>(null);
+
+  const scrollToClientsSection = () => clientsSectionRef.current!.scrollIntoView({
+    block: "center",
+    behavior: "smooth",
+  }); 
+
+  const scrollToTop = () => {
     window.scrollTo({
-      top: 0, 
-      behavior: 'smooth'
+      top: 0,
+      behavior: "smooth",
     });
   };
-
-  const scrollToNextSection = () =>{
-    window.scrollTo({
-      top: 800, 
-      behavior: 'smooth'
-    });
-  };
-
-  window.addEventListener('scroll', toggleVisible);
 
   return (
     <div>
@@ -73,11 +59,19 @@ export default function Home() {
               </picture>
             </a>
             <div className="flex gap-5">
-              <a href="https://github.com/JoffreyTrebot" target="_blank" rel="noreferrer">
-                <AiFillGithub className="border border-1 border-black rounded-full text-3xl"/>
+              <a
+                href="https://github.com/JoffreyTrebot"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiFillGithub className="border border-1 border-black rounded-full text-3xl" />
               </a>
-              <a href="https://www.linkedin.com/in/joffrey-trébot-a1b324158/" target="_blank" rel="noreferrer">
-                <AiFillLinkedin className="border border-1 border-black rounded text-3xl"/>
+              <a
+                href="https://www.linkedin.com/in/joffrey-trébot-a1b324158/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiFillLinkedin className="border border-1 border-black rounded text-3xl" />
               </a>
             </div>
           </div>
@@ -106,12 +100,8 @@ export default function Home() {
                 <p>Je suis</p>
               </div>
               <div className="flex ml-5 border border-1 rounded-lg border-black p-2 font-display sm:text-sm xs:text-xs">
-                <p className="hidden sm:block">
-                  Développeur Front-End
-                </p>
-                <p className="block sm:hidden">
-                  Dev Front-End
-                </p>
+                <p className="hidden sm:block">Développeur Front-End</p>
+                <p className="block sm:hidden">Dev Front-End</p>
               </div>
               <div className="flex  ml-2">
                 <p className="border border-1 rounded-lg border-black p-2 font-display text-sm xs:text-xs ">
@@ -144,9 +134,7 @@ export default function Home() {
               </button>
             </div>
             <div className="sm:mt-10 xs:mt-7 grid grid-cols-5 sm:gap-2 xs:gap-1 font-display text-center sm:text-xs xs:text-xxs max-w-lg">
-              <div className="bg-cyan-200 py-2 px-4 rounded-full">
-                React
-              </div>
+              <div className="bg-cyan-200 py-2 px-4 rounded-full">React</div>
               <div className="bg-sky-200 py-2 sm:px-4 xs:px-2 rounded-full">
                 Flutter
               </div>
@@ -176,17 +164,95 @@ export default function Home() {
         </div>
       </main>
 
-      <div className="flex justify-center sm:mb-2 xs:mb-1">
-        <button onClick={scrollToNextSection}>
+      <div className="flex justify-center sm:mb-2 xs:mt-2">
+        <button onClick={scrollToClientsSection}>
           <AiOutlineDown className="sm:text-3xl xs:text-xl animate-bounce " />
         </button>
       </div>
 
-      <section className="flex bg-black min-h-[80vh] justify-center">
-        <p className="font-display text-white mt-4 sm:text-sm xs:text-xs">
+      <section className="bg-black pb-10 lg:min-h-[30vh] flex flex-col justify-between" ref={clientsSectionRef}>
+        <p className="flex justify-center font-display text-white pt-4 sm:text-sm xs:text-xs lg:text-lg">
           Ils m'ont fait confiance... pourquoi pas vous ?
         </p>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 lg:container lg:mx-auto gap-y-11 lg:gap-y-0 mt-10 lg:mt-0 justify-items-center items-center w-full">
+          <picture className="grayscale saturate-200 contrast-50 brightness-200 hover:contrast-0 transition-all">
+            <source
+              srcSet="/assets/logo_chanel.png"
+              type="image/png"
+              className=""
+            />
+            <img
+              src="/assets/logo_chanel.png"
+              className="w-40 xs:w-[100px]"
+              alt=""
+            />
+          </picture>
+          <picture className="grayscale contrast-50 hover:contrast-0 transition-all">
+            <source
+              srcSet="/assets/logo_sqli.png"
+              type="image/png"
+              className=""
+            />
+            <img
+              src="/assets/logo_sqli.png"
+              className="w-40 xs:w-[100px]"
+              alt=""
+            />
+          </picture>
+          <picture className="grayscale saturate-200 contrast-50 brightness-200 hover:contrast-0 transition-all">
+            <source
+              srcSet="/assets/logo_waynna.png"
+              type="image/png"
+              className=""
+            />
+            <img
+              src="/assets/logo_waynna.png"
+              className="w-40 xs:w-[100px]"
+              alt=""
+            />
+          </picture>
+          <picture className="grayscale saturate-200 contrast-50 brightness-200 hover:contrast-0 transition-all">
+            <source
+              srcSet="/assets/logo_abeille.png"
+              type="image/png"
+              className=""
+            />
+            <img
+              src="/assets/logo_abeille.png"
+              className="w-40 xs:w-[100px]"
+              alt=""
+            />
+          </picture>
+          <picture className="grayscale saturate-200 contrast-50 brightness-200 hover:contrast-0 transition-all">
+            <source
+              srcSet="/assets/logo_sailcloud.png"
+              type="image/png"
+              className=""
+            />
+            <img
+              src="/assets/logo_sailcloud.png"
+              className="w-40 xs:w-[100px]"
+              alt=""
+            />
+          </picture>
+          <picture className="grayscale saturate-200 contrast-50 brightness-200 hover:contrast-0 transition-all">
+            <source
+              srcSet="/assets/logo_lavgreen.png"
+              type="image/png"
+              className=""
+            />
+            <img
+              src="/assets/logo_lavgreen.png"
+              className="w-40 xs:w-[100px]"
+              alt=""
+            />
+          </picture>
+        </div>
+        <div className="invisible"></div>
       </section>
+
+      <section className="min-h-[80vh]"></section>
     </div>
   );
 }
