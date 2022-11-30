@@ -8,10 +8,11 @@ import { AiFillGithub, AiFillLinkedin, AiOutlineDown } from "react-icons/ai";
 export default function Home() {
   const clientsSectionRef = useRef<HTMLDivElement>(null);
 
-  const scrollToClientsSection = () => clientsSectionRef.current!.scrollIntoView({
-    block: "center",
-    behavior: "smooth",
-  }); 
+  const scrollToClientsSection = () =>
+    clientsSectionRef.current!.scrollIntoView({
+      block: "center",
+      behavior: "smooth",
+    });
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -170,7 +171,10 @@ export default function Home() {
         </button>
       </div>
 
-      <section className="bg-black pb-10 lg:min-h-[30vh] flex flex-col justify-between" ref={clientsSectionRef}>
+      <section
+        className="bg-black pb-10 lg:min-h-[30vh] flex flex-col justify-between"
+        ref={clientsSectionRef}
+      >
         <p className="flex justify-center font-display text-white pt-4 sm:text-sm xs:text-xs lg:text-lg">
           Ils m'ont fait confiance... pourquoi pas vous ?
         </p>
@@ -252,7 +256,206 @@ export default function Home() {
         <div className="invisible"></div>
       </section>
 
-      <section className="min-h-[80vh]"></section>
+      <section className="min-h-[80vh] container mx-auto px-5 pb-20 lg:px-7">
+        <h2 className="font-display text-center lg:text-left mt-20 text-2xl mb-20 lg:mb-40 lg:mt-40 lg:text-4xl sm:text-3xl">
+          Mes derniers projets
+        </h2>
+
+        <div className="sm:w-[500px] lg:w-full sm:mx-auto">
+          <div className="mt-10 lg:flex lg:flex-row lg:gap-x-5 lg:justify-center">
+            <div className="border border-1 border-black p-1 mb-2 w-fit">
+              <picture>
+                <source srcSet="/assets/chanel_project.png" type="image/png" />
+                <img
+                  src="/assets/chanel_project.png"
+                  className="border border-1 border-black lg:w-[35rem]"
+                  alt="Screenshot du projet CHANEL."
+                />
+              </picture>
+            </div>
+            <div className="lg:w-[500px] lg:mt-5">
+              <h3 className="font-display text-xl lg:text-2xl">
+                CHANEL: Conception et développement d'un nouvel intranet
+              </h3>
+              <p className="font-paragraphe text-xs mt-2 lg:text-sm">
+                Idéation et conception de tout le visuel du nouvel intranet
+                CHANEL. Puis développement et construction de cette intranet.
+              </p>
+              <div className="sm:mt-10 xs:mt-7 grid grid-cols-5 sm:gap-2 xs:gap-1 font-display text-center sm:text-xs xs:text-xxs max-w-lg">
+                <div className="bg-violet-200 py-2 sm:px-4 xs:px-2 rounded-full">
+                  Figma
+                </div>
+                <div className="bg-yellow-200 py-2 sm:px-4 xs:px-2 rounded-full">
+                  LumApps
+                </div>
+                <div className="bg-orange-200 py-2 sm:px-4 xs:px-2 rounded-full">
+                  HTML
+                </div>
+                <div className="bg-lime-200 py-2 sm:px-4 xs:px-2 rounded-full">
+                  CSS
+                </div>
+                <div className="bg-cyan-200 py-2 px-4 rounded-full">React</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 lg:flex lg:flex-row lg:gap-x-5 lg:justify-center">
+            <div className="border border-1 border-black p-1 mb-2 w-fit">
+              <picture>
+                <source
+                  srcSet="/assets/waynna_site_project.png"
+                  type="image/png"
+                />
+                <img
+                  src="/assets/waynna_site_project.png"
+                  className="border border-1 border-black lg:w-[35rem]"
+                  alt="Screenshot du projet Waynna Website."
+                />
+              </picture>
+            </div>
+            <div className="lg:w-[500px] lg:mt-5">
+              <h3 className="font-display text-xl lg:text-2xl">
+                Waynna: Site internet
+              </h3>
+              <p className="font-paragraphe text-xs mt-2 lg:text-sm">
+                Conception des maquettes puis développement d'une page vitrine,
+                explicant la solution, avec un sytème d'inscription et de
+                connexion. Une gestion de compte et de ses paramètres, ainsi
+                qu'une gestion de la méthode de paiement.
+              </p>
+              <div className="sm:mt-10 xs:mt-7 grid grid-cols-5 sm:gap-2 xs:gap-1 font-display text-center sm:text-xs xs:text-xxs max-w-lg">
+                <div className="bg-cyan-200 py-2 px-4 rounded-full">React</div>
+                <div className="bg-blue-200 py-2 sm:px-4 xs:px-2 rounded-full">
+                  MUI
+                </div>
+                <div className="bg-amber-200 py-2 sm:px-4 xs:px-2 rounded-full">
+                  Firebase
+                </div>
+                <div className="bg-violet-200 py-2 sm:px-4 xs:px-2 rounded-full">
+                  Figma
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 lg:flex lg:flex-row lg:gap-x-5 lg:justify-center">
+            <div className="border border-1 border-black p-1 mb-2 w-fit">
+              <picture>
+                <source
+                  srcSet="/assets/waynna_app_project.png"
+                  type="image/png"
+                />
+                <img
+                  src="/assets/waynna_app_project.png"
+                  className="border border-1 border-black lg:w-[35rem]"
+                  alt="Screenshot du projet Waynna Application Mobile."
+                />
+              </picture>
+            </div>
+            <div className="lg:w-[500px] lg:mt-5">
+              <h3 className="font-display text-xl lg:text-2xl">
+                Waynna: Application mobile
+              </h3>
+              <p className="font-paragraphe text-xs mt-2 lg:text-sm">
+                Conception de toute l'identité visuel de Waynna, ainsi que les
+                maquettes de l'application mobile, puis développement de
+                l'application pour iOS et Android avec la gestion de
+                l'intégration continue et la mise en production sur les
+                différentes stores.
+              </p>
+              <div className="sm:mt-10 xs:mt-7 grid grid-cols-5 sm:gap-2 xs:gap-1 font-display text-center sm:text-xs xs:text-xxs max-w-lg">
+                <div className="bg-sky-200 py-2 sm:px-4 xs:px-2 rounded-full">
+                  Flutter
+                </div>
+                <div className="bg-amber-200 py-2 sm:px-4 xs:px-2 rounded-full">
+                  Firebase
+                </div>
+                <div className="bg-violet-200 py-2 sm:px-4 xs:px-2 rounded-full">
+                  Figma
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 lg:flex lg:flex-row lg:gap-x-5 lg:justify-center">
+            <div className="border border-1 border-black p-1 mb-2 w-fit">
+              <picture>
+                <source
+                  srcSet="/assets/portfolio_project.png"
+                  type="image/png"
+                />
+                <img
+                  src="/assets/portfolio_project.png"
+                  className="border border-1 border-black lg:w-[35rem]"
+                  alt="Screenshot du projet Portfolio."
+                />
+              </picture>
+            </div>
+            <div className="lg:w-[500px] lg:mt-5">
+              <h3 className="font-display text-xl lg:text-2xl">
+                Joffrey: Portfolio
+              </h3>
+              <p className="font-paragraphe text-xs mt-2 lg:text-sm >">
+                Réflexion et conception de l'identité visuel de mon portfolio
+                avant le développement. Puis développement de la page en suivant
+                la maquette.
+              </p>
+              <div className="sm:mt-10 xs:mt-7 grid grid-cols-5 sm:gap-2 xs:gap-1 font-display text-center sm:text-xs xs:text-xxs max-w-lg">
+                <div className="bg-cyan-200 py-2 px-4 rounded-full">React</div>
+                <div className="bg-stone-200 py-2 sm:px-4 xs:px-2 rounded-full">
+                  NextJS
+                </div>
+                <div className="bg-teal-200 py-2 sm:px-4 xs:px-2 rounded-full ">
+                  Tailwind
+                </div>
+                <div className="bg-violet-200 py-2 sm:px-4 xs:px-2 rounded-full">
+                  Figma
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 lg:flex lg:flex-row lg:gap-x-5 lg:justify-center">
+            <div className="border border-1 border-black p-1 mb-2 w-fit">
+              <picture>
+                <source
+                  srcSet="/assets/lavgreen_project.png"
+                  type="image/png"
+                />
+                <img
+                  src="/assets/lavgreen_project.png"
+                  className="border border-1 border-black lg:w-[35rem]"
+                  alt="Screenshot du projet LavGreen."
+                />
+              </picture>
+            </div>
+            <div className="lg:w-[500px] lg:mt-5">
+              <h3 className="font-display text-xl lg:text-2xl">
+                LavGreen: Refonte du site internet
+              </h3>
+              <p className="font-paragraphe text-xs mt-2 lg:w-[500px]">
+                Refonte total du site internet qui devenait vieillissant, en
+                apportant de la modernité, et en y développant aussi une
+                solution d'interface administrateur pour la gestion des prix.
+              </p>
+              <div className="sm:mt-10 xs:mt-7 grid grid-cols-5 sm:gap-2 xs:gap-1 font-display text-center sm:text-xs xs:text-xxs max-w-lg">
+                <div className="bg-orange-200 py-2 sm:px-4 xs:px-2 rounded-full">
+                  HTML
+                </div>
+                <div className="bg-pink-200 py-2 sm:px-4 xs:px-2 rounded-full">
+                  XD
+                </div>
+                <div className="bg-lime-200 py-2 sm:px-4 xs:px-2 rounded-full">
+                  CSS
+                </div>
+                <div className="bg-purple-200 py-2 sm:px-4 xs:px-2 rounded-full">
+                  Bootstrap
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
