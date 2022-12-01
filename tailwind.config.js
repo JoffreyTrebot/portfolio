@@ -5,7 +5,18 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontSize: {
+        xxs: ["10px", {}],
+      },
+      screens: {
+        xs: "360px",
+      },
+      fontFamily: {
+        display: ["DM Serif Display"],
+        paragraphe: ["Montserrat"],
+      },
+    },
   },
   plugins: [],
 };
