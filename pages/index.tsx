@@ -68,38 +68,38 @@ export default function Home() {
       user_subject.value != ""
     ) {
       emailjs
-      .sendForm(
-        "service_bqjoj7n",
-        "template_2a10wvp",
-        formRef.current!,
-        "qC-wLYJRPgesmHCnx"
-      )
-      .then(
-        (result) => {
-          toast.success("Message envoyé !", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          });
-        },
-        (error) => {
-          toast.error("Une erreur s'est produite, veuillez réessayer. !", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          });
-        }
-      );
+        .sendForm(
+          "service_bqjoj7n",
+          "template_2a10wvp",
+          formRef.current!,
+          "qC-wLYJRPgesmHCnx"
+        )
+        .then(
+          (result) => {
+            toast.success("Message envoyé !", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+            });
+          },
+          (error) => {
+            toast.error("Une erreur s'est produite, veuillez réessayer. !", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+            });
+          }
+        );
     } else {
       toast.error("Vous n'avez pas rempli tous les champs !", {
         position: "top-right",
@@ -112,7 +112,6 @@ export default function Home() {
         theme: "dark",
       });
     }
-    
   };
 
   return (
@@ -121,7 +120,7 @@ export default function Home() {
         <title>Joffrey Trébot - Développeur Front-End Freelance</title>
         <meta
           name="description"
-          content="J'aide les entreprises à atteindre leurs objectifs en concevant et en créant des produits numériques centrés sur l'utilisateur et son expérience."
+          content="J'aide les entreprises à atteindre leurs objectifs en réalisant des solutions numériques centrés sur l'utilisateur et son expérience."
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -200,7 +199,7 @@ export default function Home() {
                 <p className="block sm:hidden">Dev Front-End</p>
               </div>
               <div className="flex  ml-2">
-                <p className="border border-1 rounded-lg border-black p-2 font-display text-sm xs:text-xs ">
+                <p className="border border-1 rounded-lg border-black p-2 font-display sm:text-sm xs:text-xs ">
                   Freelance
                 </p>
               </div>
@@ -209,11 +208,11 @@ export default function Home() {
               <h1>Joffrey Trébot</h1>
             </div>
 
-            <div className="flex mt-5 font-paragraphe sm:text-sm xs:text-xs max-w-xl">
+            <div className="flex mt-5 font-paragraphe sm:text-base xs:text-xs max-w-xl">
               <p>
-                J'aide les entreprises à atteindre leurs objectifs en concevant
-                et en créant des produits numériques centrés sur l'utilisateur
-                et son expérience.
+                J'aide les entreprises à atteindre leurs objectifs en réalisant
+                des solutions numériques centrés sur l'utilisateur et son
+                expérience.
               </p>
             </div>
             <div className="flex justify-center lg:justify-start sm:mt-10 xs:mt-5">
@@ -332,7 +331,7 @@ export default function Home() {
         ref={projectsSectionRef}
       >
         <h2 className="font-display text-center lg:text-left mt-20 text-2xl mb-20 lg:mb-40 lg:mt-40 lg:text-4xl sm:text-3xl">
-          Mes derniers projets
+          Mes récentes réalisations
         </h2>
 
         <div className="sm:w-[500px] lg:w-full sm:mx-auto">
@@ -351,9 +350,9 @@ export default function Home() {
               <h3 className="font-display text-xl lg:text-2xl">
                 CHANEL: Conception et développement d'un nouvel intranet
               </h3>
-              <p className="font-paragraphe text-xs mt-2 lg:text-sm">
+              <p className="font-paragraphe text-xs mt-2 sm:text-base">
                 Idéation et conception de tout le visuel du nouvel intranet
-                CHANEL. Puis développement et construction de cette intranet.
+                CHANEL. Puis développement et construction de cet intranet.
               </p>
               <div className="sm:mt-10 xs:mt-7 grid grid-cols-5 sm:gap-2 xs:gap-1 font-display text-center sm:text-xs xs:text-xxs max-w-lg">
                 <div className="bg-violet-200 py-2 sm:px-4 xs:px-2 rounded-full">
@@ -391,7 +390,7 @@ export default function Home() {
               <h3 className="font-display text-xl lg:text-2xl">
                 Waynna: Site internet
               </h3>
-              <p className="font-paragraphe text-xs mt-2 lg:text-sm">
+              <p className="font-paragraphe text-xs mt-2 sm:text-base">
                 Conception des maquettes puis développement d'une page vitrine,
                 expliquant la solution, avec un système d'inscription et de
                 connexion. Une gestion de compte et de ses paramètres, ainsi
@@ -430,7 +429,7 @@ export default function Home() {
               <h3 className="font-display text-xl lg:text-2xl">
                 Waynna: Application mobile
               </h3>
-              <p className="font-paragraphe text-xs mt-2 lg:text-sm">
+              <p className="font-paragraphe text-xs mt-2 sm:text-base">
                 Conception de toute l'identité visuelle de Waynna, ainsi que les
                 maquettes de l'application mobile, puis développement de
                 l'application pour iOS et Android avec la gestion de
@@ -469,7 +468,7 @@ export default function Home() {
               <h3 className="font-display text-xl lg:text-2xl">
                 Joffrey: Portfolio
               </h3>
-              <p className="font-paragraphe text-xs mt-2 lg:text-sm">
+              <p className="font-paragraphe text-xs mt-2 sm:text-base">
                 Réflexion et conception de l'identité visuelle de mon portfolio
                 avant le développement. Puis développement de la page en suivant
                 la maquette.
@@ -507,7 +506,7 @@ export default function Home() {
               <h3 className="font-display text-xl lg:text-2xl">
                 LavGreen: Refonte du site internet
               </h3>
-              <p className="font-paragraphe text-xs mt-2 lg:text-sm">
+              <p className="font-paragraphe text-xs mt-2 sm:text-base">
                 Refonte totale du site internet qui devenait vieillissant, en
                 apportant de la modernité, et en y développant aussi une
                 solution d'interface administrateur pour la gestion des prix.
