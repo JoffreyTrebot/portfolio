@@ -124,6 +124,7 @@ export default function Home() {
           content="J'aide les entreprises à atteindre leurs objectifs en concevant et en créant des produits numériques centrés sur l'utilisateur et son expérience."
         />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
