@@ -275,11 +275,11 @@ export default function Home() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 lg:container lg:mx-auto gap-y-11 lg:gap-y-0 mt-10 lg:mt-0 justify-items-center items-center w-full">
           <picture className="grayscale saturate-200 contrast-50 brightness-200 hover:contrast-0 transition-all">
-            <source srcSet="/assets/logo_chanel.png" type="image/png" />
+            <source srcSet="/assets/logo_luxe.png" type="image/png" />
             <img
-              src="/assets/logo_chanel.png"
+              src="/assets/logo_luxe.png"
               className="w-40 xs:w-[100px]"
-              alt="Logo Chanel."
+              alt="Logo Luxe."
             />
           </picture>
           <picture className="grayscale contrast-50 hover:contrast-0 transition-all">
@@ -338,21 +338,22 @@ export default function Home() {
           <div className="mt-10 lg:flex lg:flex-row lg:gap-x-5 lg:justify-center">
             <div className="border border-1 border-black p-1 mb-2 w-fit">
               <picture>
-                <source srcSet="/assets/chanel_project.png" type="image/png" />
+                <source srcSet="/assets/luxe_project.png" type="image/png" />
                 <img
-                  src="/assets/chanel_project.png"
+                  src="/assets/luxe_project.png"
                   className="border border-1 border-black lg:w-[35rem]"
-                  alt="Screenshot du projet CHANEL."
+                  alt="Screenshot du projet Grand Acteur du Luxe."
                 />
               </picture>
             </div>
             <div className="lg:w-[500px] lg:mt-5">
               <h3 className="font-display text-xl lg:text-2xl">
-                CHANEL: Conception et développement d'un nouvel intranet
+                Grand acteur du luxe Français: Conception et développement d'un
+                nouvel intranet
               </h3>
               <p className="font-paragraphe text-xs mt-2 sm:text-base">
-                Idéation et conception de tout le visuel du nouvel intranet
-                CHANEL. Puis développement et construction de cet intranet.
+                Idéation et conception de tout le visuel du nouvel intranet.
+                Puis développement et construction de cet intranet.
               </p>
               <div className="sm:mt-10 xs:mt-7 grid grid-cols-5 sm:gap-2 xs:gap-1 font-display text-center sm:text-xs xs:text-xxs max-w-lg">
                 <div className="bg-violet-200 py-2 sm:px-4 xs:px-2 rounded-full">
@@ -654,12 +655,12 @@ export default function Home() {
                       <p>Joffrey Trébot</p>
                     </div>
 
-                    <div className="flex mt-7">
-                      <div className="flex border border-1 rounded-lg border-white text-white p-2 font-display sm:text-sm xs:text-xs">
+                    <div className="flex mt-7 text-white">
+                      <div className="flex border border-1 rounded-lg border-white  p-2 font-display sm:text-sm xs:text-xs">
                         <p>Développeur Front-End</p>
                       </div>
                       <div className="flex ml-2">
-                        <p className="border border-1 rounded-lg border-white text-white p-2 font-display text-sm xs:text-xs ">
+                        <p className="border border-1 rounded-lg border-white p-2 font-display sm:text-sm xs:text-xs">
                           Freelance
                         </p>
                       </div>
